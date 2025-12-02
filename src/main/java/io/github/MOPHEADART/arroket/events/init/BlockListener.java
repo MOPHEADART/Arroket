@@ -8,7 +8,6 @@ import net.modificationstation.stationapi.api.event.registry.BlockRegistryEvent;
 import net.modificationstation.stationapi.api.mod.entrypoint.EntrypointManager;
 import net.modificationstation.stationapi.api.template.block.TemplateBlock;
 import net.modificationstation.stationapi.api.template.block.TemplateStairsBlock;
-import net.modificationstation.stationapi.api.util.Namespace;
 
 import java.lang.invoke.MethodHandles;
 
@@ -24,6 +23,10 @@ public class BlockListener {
     public static Block TEST_BLOCK_STAIRS;
     public static Block CRIMSON_NYLIUM;
     public static Block WARPED_NYLIUM;
+    public static Block CRIMSON_STEM;
+    public static Block WARPED_STEM;
+    public static Block CRIMSON_PLANKS;
+    public static Block WARPED_PLANKS;
 
     //Block Registry
     @EventListener
@@ -48,5 +51,29 @@ public class BlockListener {
                 .setSoundGroup(Block.STONE_SOUND_GROUP)
                 .setHardness(0.5F)
                 .setResistance(0.5F);
+
+        CRIMSON_STEM = new TemplateBlock(NAMESPACE.id("crimson_stem"), Material.WOOD)
+                .setTranslationKey(NAMESPACE.id("crimson_stem"))
+                .setSoundGroup(Block.WOOD_SOUND_GROUP)
+                .setHardness(2.F)
+                .setResistance(2.F);
+
+        WARPED_STEM = new TemplateBlock(NAMESPACE.id("warped_stem"), Material.WOOD)
+                .setTranslationKey(NAMESPACE.id("warped_stem"))
+                .setSoundGroup(Block.WOOD_SOUND_GROUP)
+                .setHardness(2.F)
+                .setResistance(2.F);
+
+        CRIMSON_PLANKS = new TemplateBlock(NAMESPACE.id("crimson_planks"), Material.WOOD)
+                .setTranslationKey(NAMESPACE.id("crimson_planks"))
+                .setSoundGroup(Block.WOOD_SOUND_GROUP)
+                .setHardness(2.F)
+                .setResistance(2.F);
+
+        WARPED_PLANKS = new TemplateBlock(NAMESPACE.id("warped_planks"), Material.WOOD)
+                .setTranslationKey(NAMESPACE.id("warped_planks"))
+                .setSoundGroup(Block.WOOD_SOUND_GROUP)
+                .setHardness(2.F)
+                .setResistance(2.F);
     }
 }

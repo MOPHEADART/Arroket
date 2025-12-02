@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "arroket:block/crimson_stem_top",
+    "side": "arroket:block/crimson_stem"
+  }
+}

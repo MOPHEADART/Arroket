@@ -3,5 +3,9 @@ tile.@.test_block.name = Test Block
 tile.@.test_block_stairs.name = Test Block Stairs
 tile.@.crimson_nylium.name = Crimson Nylium
 tile.@.warped_nylium.name = Warped Nylium
+tile.@.crimson_stem.name = Crimson Stem
+tile.@.warped_stem.name = Warped Stem
+tile.@.crimson_planks.name = Crimson Planks
+tile.@.warped_planks.name = Warped Planks
 
 item.@.wrench.name = Wrench

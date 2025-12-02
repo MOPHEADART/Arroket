@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "arroket:crimson_stem"
+    }
+  ],
+  "result": {
+    "item": "arroket:crimson_planks",
+    "count": 4
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "arroket:warped_stem"
+    }
+  ],
+  "result": {
+    "item": "arroket:warped_planks",
+    "count": 4
+  }
+}
