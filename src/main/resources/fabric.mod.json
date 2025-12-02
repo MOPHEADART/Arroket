@@ -20,7 +20,8 @@
   "entrypoints": {
     "stationapi:event_bus": [
       "io.github.MOPHEADART.arroket.events.init.InitListener",
-      "io.github.MOPHEADART.arroket.events.init.BlockListener"
+      "io.github.MOPHEADART.arroket.events.init.BlockListener",
+      "io.github.MOPHEADART.arroket.events.init.ItemListener"
     ],
     "stationapi:event_bus_client": [
       "io.github.MOPHEADART.arroket.events.init.client.TextureListener"

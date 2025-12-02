@@ -1,0 +1,7 @@
+# @ is a shorthand for the current mod id, which is arroket. E.g: tile.@.redclay.name
+tile.@.test_block.name = Test Block
+tile.@.test_block_stairs.name = Test Block Stairs
+tile.@.crimson_nylium.name = Crimson Nylium
+tile.@.warped_nylium.name = Warped Nylium
+
+item.@.wrench.name = Wrench
