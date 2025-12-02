@@ -9,13 +9,12 @@ import net.modificationstation.stationapi.api.util.Namespace;
 
 import java.lang.invoke.MethodHandles;
 
+import static io.github.MOPHEADART.arroket.ArroketMod.NAMESPACE;
+
 public class ItemListener {
     static {
         EntrypointManager.registerLookup(MethodHandles.lookup());
     }
-
-    @SuppressWarnings("UnstableApiUsage")
-    public static final Namespace NAMESPACE = Namespace.resolve();
 
     public static Item WRENCH;
 
