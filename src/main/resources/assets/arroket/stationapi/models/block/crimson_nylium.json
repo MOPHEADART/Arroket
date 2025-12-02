@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "top": "arroket:block/crimson_nylium_top",
+    "bottom": "minecraft:block/netherrack",
+    "side": "arroket:block/crimson_nylium_side",
+    "particle": "arroket:block/crimson_nylium_side",
+    "front": "arroket:block/crimson_nylium_side"
+  }
+}

@@ -1,33 +1,35 @@
 {
   "schemaVersion": 1,
-  "id": "%s",
+  "id": "arroket",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Arroket",
+  "description": "A revitalized beta 1.7.3 experience.",
   "authors": [
-    "Me!"
+    "MOPPIE"
   ],
   "contact": {
     "homepage": "https://glass-launcher.net/",
     "sources": "https://github.com/calmilamsy/stationapi-example-mod"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/%s/icon.png",
+  "license": "MIT",
+  "icon": "assets/arroket/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "stationapi:event_bus": [
-      "%s.events.init.InitListener"
+      "io.github.MOPHEADART.arroket.events.init.InitListener",
+      "io.github.MOPHEADART.arroket.events.init.BlockListener"
     ],
     "stationapi:event_bus_client": [
+      "io.github.MOPHEADART.arroket.events.init.client.TextureListener"
     ],
     "stationapi:event_bus_server": [
     ]
   },
   "mixins": [
-    "%s.mixins.json"
+    "arroket.mixins.json"
   ],
 
   "depends": {
