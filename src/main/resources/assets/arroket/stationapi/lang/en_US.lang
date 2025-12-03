@@ -6,6 +6,10 @@ tile.@.warped_nylium.name = Warped Nylium
 tile.@.crimson_stem.name = Crimson Stem
 tile.@.warped_stem.name = Warped Stem
 tile.@.crimson_planks.name = Crimson Planks
+tile.@.crimson_slab.name = Crimson Slab
+tile.@.crimson_stairs.name = Crimson Stairs
 tile.@.warped_planks.name = Warped Planks
+tile.@.warped_slab.name = Warped Slab
+tile.@.warped_planks.name = Warped Stairs
 
 item.@.wrench.name = Wrench

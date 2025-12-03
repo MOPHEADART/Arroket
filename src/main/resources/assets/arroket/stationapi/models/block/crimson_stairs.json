@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "arroket:block/crimson_planks",
+    "top": "arroket:block/crimson_planks",
+    "side": "arroket:block/crimson_planks"
+  }
+}
