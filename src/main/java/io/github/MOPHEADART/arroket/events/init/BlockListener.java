@@ -9,6 +9,7 @@ import net.minecraft.block.material.Material;
 import net.modificationstation.stationapi.api.event.registry.BlockRegistryEvent;
 import net.modificationstation.stationapi.api.mod.entrypoint.EntrypointManager;
 import net.modificationstation.stationapi.api.template.block.TemplateBlock;
+import net.modificationstation.stationapi.api.template.block.TemplateSlabBlock;
 import net.modificationstation.stationapi.api.template.block.TemplateStairsBlock;
 
 import java.lang.invoke.MethodHandles;
@@ -29,9 +30,10 @@ public class BlockListener {
     public static Block WARPED_STEM;
     public static Block CRIMSON_PLANKS;
     public static Block WARPED_PLANKS;
-    public static Block CRIMSON_SLAB;
+    //public static Block CRIMSON_SLAB;
+    //public static Block CRIMSON_DOUBLE_SLAB;
     public static Block CRIMSON_STAIRS;
-    public static Block WARPED_SLAB;
+    //public static Block WARPED_SLAB;
     public static Block WARPED_STAIRS;
 
     //Block Registry
@@ -79,8 +81,10 @@ public class BlockListener {
         CRIMSON_STAIRS = new TemplateStairsBlock(NAMESPACE.id("crimson_stairs"), CRIMSON_PLANKS)
                 .setTranslationKey(NAMESPACE.id("crimson_stairs"));
 
-        CRIMSON_SLAB = new TemplateBlock(NAMESPACE.id("crimson_slab"), Material.WOOD)
-                .setTranslationKey(NAMESPACE.id("crimson_slab"));
+        //CRIMSON_SLAB = new TemplateSlabBlock(NAMESPACE.id("crimson_slab"), false)
+                //.setTranslationKey(NAMESPACE.id("crimson_slab"));
+        //CRIMSON_DOUBLE_SLAB = new TemplateSlabBlock(NAMESPACE.id("crimson_double_slab"), true)
+                //.setTranslationKey(NAMESPACE.id("crimson_double_slab"));
 
         WARPED_PLANKS = new WarpedPlanks(NAMESPACE.id("warped_planks"), Material.WOOD)
                 .setTranslationKey(NAMESPACE.id("warped_planks"))
@@ -91,10 +95,7 @@ public class BlockListener {
         WARPED_STAIRS = new TemplateStairsBlock(NAMESPACE.id("warped_stairs"), WARPED_PLANKS)
                 .setTranslationKey(NAMESPACE.id("warped_stairs"));
 
-        WARPED_SLAB = new TemplateBlock(NAMESPACE.id("warped_slab"), Material.WOOD)
-                .setTranslationKey(NAMESPACE.id("warped_slab"))
-                .setSoundGroup(Block.WOOD_SOUND_GROUP)
-                .setHardness(2.F)
-                .setResistance(2.F);
+        //WARPED_SLAB = new TemplateSlabBlock(NAMESPACE.id("warped_slab"), false)
+                //.setTranslationKey(NAMESPACE.id("warped_slab"));
     }
 }

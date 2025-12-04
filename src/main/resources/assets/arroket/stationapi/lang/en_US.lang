@@ -10,6 +10,6 @@ tile.@.crimson_slab.name = Crimson Slab
 tile.@.crimson_stairs.name = Crimson Stairs
 tile.@.warped_planks.name = Warped Planks
 tile.@.warped_slab.name = Warped Slab
-tile.@.warped_planks.name = Warped Stairs
+tile.@.warped_stairs.name = Warped Stairs
 
 item.@.wrench.name = Wrench
