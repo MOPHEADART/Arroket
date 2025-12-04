@@ -1,5 +1,7 @@
 package io.github.MOPHEADART.arroket.events.init.client;
 
+import io.github.MOPHEADART.arroket.block.CrimsonPlanks;
+import io.github.MOPHEADART.arroket.block.WarpedPlanks;
 import io.github.MOPHEADART.arroket.block.testBlock;
 import net.mine_diver.unsafeevents.listener.EventListener;
 import net.modificationstation.stationapi.api.client.event.texture.TextureRegisterEvent;
@@ -9,8 +11,6 @@ import net.modificationstation.stationapi.api.mod.entrypoint.EntrypointManager;
 import net.modificationstation.stationapi.api.util.Namespace;
 
 import java.lang.invoke.MethodHandles;
-
-//Outdated method, no need to use
 
 public class TextureListener {
     static {
@@ -26,5 +26,8 @@ public class TextureListener {
 
         testBlock.testBlockSide = terrain.addTexture(NAMESPACE.id("block/test_block")).index;
         testBlock.testBlockTop = terrain.addTexture(NAMESPACE.id("block/test_block")).index;
+
+        CrimsonPlanks.crimsonPlanks = terrain.addTexture(NAMESPACE.id("block/crimson_planks")).index;
+        WarpedPlanks.warpedPlanks = terrain.addTexture(NAMESPACE.id("block/warped_planks")).index;
     }
 }

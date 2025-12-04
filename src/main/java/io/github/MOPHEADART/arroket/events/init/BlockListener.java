@@ -1,9 +1,10 @@
 package io.github.MOPHEADART.arroket.events.init;
 
+import io.github.MOPHEADART.arroket.block.CrimsonPlanks;
+import io.github.MOPHEADART.arroket.block.WarpedPlanks;
 import io.github.MOPHEADART.arroket.block.testBlock;
 import net.mine_diver.unsafeevents.listener.EventListener;
 import net.minecraft.block.Block;
-import net.minecraft.block.StairsBlock;
 import net.minecraft.block.material.Material;
 import net.modificationstation.stationapi.api.event.registry.BlockRegistryEvent;
 import net.modificationstation.stationapi.api.mod.entrypoint.EntrypointManager;
@@ -27,15 +28,15 @@ public class BlockListener {
     public static Block CRIMSON_STEM;
     public static Block WARPED_STEM;
     public static Block CRIMSON_PLANKS;
+    public static Block WARPED_PLANKS;
     public static Block CRIMSON_SLAB;
     public static Block CRIMSON_STAIRS;
-    public static Block WARPED_PLANKS;
     public static Block WARPED_SLAB;
     public static Block WARPED_STAIRS;
 
     //Block Registry
     @EventListener
-    private static void registerBlocks(BlockRegistryEvent event) {
+    private void registerBlocks(BlockRegistryEvent event) {
         TEST_BLOCK = new testBlock(NAMESPACE.id("test_block"))
                 .setTranslationKey(NAMESPACE.id("test_block"))
                 .setSoundGroup(Block.DIRT_SOUND_GROUP)
@@ -69,14 +70,8 @@ public class BlockListener {
                 .setHardness(2.F)
                 .setResistance(2.F);
 
-        CRIMSON_PLANKS = new TemplateBlock(NAMESPACE.id("crimson_planks"), Material.WOOD)
+        CRIMSON_PLANKS = new CrimsonPlanks(NAMESPACE.id("crimson_planks"), Material.WOOD)
                 .setTranslationKey(NAMESPACE.id("crimson_planks"))
-                .setSoundGroup(Block.WOOD_SOUND_GROUP)
-                .setHardness(2.F)
-                .setResistance(2.F);
-
-        CRIMSON_SLAB = new TemplateBlock(NAMESPACE.id("crimson_slab"), Material.WOOD)
-                .setTranslationKey(NAMESPACE.id("crimson_slab"))
                 .setSoundGroup(Block.WOOD_SOUND_GROUP)
                 .setHardness(2.F)
                 .setResistance(2.F);
@@ -84,20 +79,20 @@ public class BlockListener {
         CRIMSON_STAIRS = new TemplateStairsBlock(NAMESPACE.id("crimson_stairs"), CRIMSON_PLANKS)
                 .setTranslationKey(NAMESPACE.id("crimson_stairs"));
 
-        WARPED_PLANKS = new TemplateBlock(NAMESPACE.id("warped_planks"), Material.WOOD)
+        CRIMSON_SLAB = new TemplateBlock(NAMESPACE.id("crimson_slab"), Material.WOOD)
+                .setTranslationKey(NAMESPACE.id("crimson_slab"));
+
+        WARPED_PLANKS = new WarpedPlanks(NAMESPACE.id("warped_planks"), Material.WOOD)
                 .setTranslationKey(NAMESPACE.id("warped_planks"))
                 .setSoundGroup(Block.WOOD_SOUND_GROUP)
                 .setHardness(2.F)
                 .setResistance(2.F);
 
+        WARPED_STAIRS = new TemplateStairsBlock(NAMESPACE.id("warped_stairs"), WARPED_PLANKS)
+                .setTranslationKey(NAMESPACE.id("warped_stairs"));
+
         WARPED_SLAB = new TemplateBlock(NAMESPACE.id("warped_slab"), Material.WOOD)
                 .setTranslationKey(NAMESPACE.id("warped_slab"))
-                .setSoundGroup(Block.WOOD_SOUND_GROUP)
-                .setHardness(2.F)
-                .setResistance(2.F);
-
-        WARPED_STAIRS = new TemplateBlock(NAMESPACE.id("warped_stairs"), Material.WOOD)
-                .setTranslationKey(NAMESPACE.id("warped_stairs"))
                 .setSoundGroup(Block.WOOD_SOUND_GROUP)
                 .setHardness(2.F)
                 .setResistance(2.F);

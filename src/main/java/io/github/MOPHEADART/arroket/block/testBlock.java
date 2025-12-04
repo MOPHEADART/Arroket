@@ -4,7 +4,7 @@ import net.minecraft.block.material.Material;
 import net.modificationstation.stationapi.api.template.block.TemplateBlock;
 import net.modificationstation.stationapi.api.util.Identifier;
 
-//Outdated method, use blockstates instead
+//Use this method for any blocks that are going to have a stair variant, specifically use ArroketBlock.class
 
 public class testBlock extends TemplateBlock {
     public static int testBlockSide;
