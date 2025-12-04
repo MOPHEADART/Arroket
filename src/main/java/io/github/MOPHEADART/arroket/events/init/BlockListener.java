@@ -9,7 +9,7 @@ import net.minecraft.block.material.Material;
 import net.modificationstation.stationapi.api.event.registry.BlockRegistryEvent;
 import net.modificationstation.stationapi.api.mod.entrypoint.EntrypointManager;
 import net.modificationstation.stationapi.api.template.block.TemplateBlock;
-import net.modificationstation.stationapi.api.template.block.TemplateSlabBlock;
+//import net.modificationstation.stationapi.api.template.block.TemplateSlabBlock;
 import net.modificationstation.stationapi.api.template.block.TemplateStairsBlock;
 
 import java.lang.invoke.MethodHandles;
