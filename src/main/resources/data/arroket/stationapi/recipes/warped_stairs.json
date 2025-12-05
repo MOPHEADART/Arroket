@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "w  ",
+    "ww ",
+    "www"
+  ],
+  "key": {
+    "w": {
+      "item": "arroket:warped_planks"
+    }
+  },
+  "result": {
+    "item": "arroket:warped_stairs",
+    "count": 4
+  }
+}

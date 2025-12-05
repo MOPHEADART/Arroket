@@ -1,0 +1,48 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "name": "wart_self_drop_with_shears",
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "match_tool",
+          "predicate": {
+            "item": "minecraft:shears"
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "item",
+          "name": "arroket:crimson_wart_block"
+        }
+      ]
+    },
+    {
+      "name": "fungi_drop_no_shears",
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "inverted",
+          "term": {
+            "condition": "match_tool",
+            "predicate": {
+              "item": "minecraft:shears"
+            }
+          }
+        },
+        {
+          "condition": "random_chance",
+          "chance": 0.10
+        }
+      ],
+      "entries": [
+        {
+          "type": "item",
+          "name": "arroket:crimson_fungus"
+        }
+      ]
+    }
+  ]
+}

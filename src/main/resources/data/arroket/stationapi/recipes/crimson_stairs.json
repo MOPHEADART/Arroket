@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "w  ",
+    "ww ",
+    "www"
+  ],
+  "key": {
+    "w": {
+      "item": "arroket:crimson_planks"
+    }
+  },
+  "result": {
+    "item": "arroket:crimson_stairs",
+    "count": 4
+  }
+}

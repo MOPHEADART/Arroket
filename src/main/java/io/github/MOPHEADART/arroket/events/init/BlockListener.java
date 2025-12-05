@@ -1,8 +1,6 @@
 package io.github.MOPHEADART.arroket.events.init;
 
-import io.github.MOPHEADART.arroket.block.CrimsonPlanks;
-import io.github.MOPHEADART.arroket.block.WarpedPlanks;
-import io.github.MOPHEADART.arroket.block.testBlock;
+import io.github.MOPHEADART.arroket.block.*;
 import net.mine_diver.unsafeevents.listener.EventListener;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -35,6 +33,10 @@ public class BlockListener {
     public static Block CRIMSON_STAIRS;
     //public static Block WARPED_SLAB;
     public static Block WARPED_STAIRS;
+    public static Block CRIMSON_FUNGI;
+    public static Block WARPED_FUNGI;
+    public static Block CRIMSON_WART_BLOCK;
+    public static Block WARPED_WART_BLOCK;
 
     //Block Registry
     @EventListener
@@ -72,6 +74,7 @@ public class BlockListener {
                 .setHardness(2.F)
                 .setResistance(2.F);
 
+
         CRIMSON_PLANKS = new CrimsonPlanks(NAMESPACE.id("crimson_planks"), Material.WOOD)
                 .setTranslationKey(NAMESPACE.id("crimson_planks"))
                 .setSoundGroup(Block.WOOD_SOUND_GROUP)
@@ -97,5 +100,25 @@ public class BlockListener {
 
         //WARPED_SLAB = new TemplateSlabBlock(NAMESPACE.id("warped_slab"), false)
                 //.setTranslationKey(NAMESPACE.id("warped_slab"));
+
+        CRIMSON_FUNGI = new NyliumFungi(NAMESPACE.id("crimson_fungi"), Material.LEAVES)
+                .setTranslationKey(NAMESPACE.id("crimson_fungi"))
+                .setSoundGroup(Block.DIRT_SOUND_GROUP);
+
+        WARPED_FUNGI = new NyliumFungi(NAMESPACE.id("warped_fungi"),Material.LEAVES)
+                .setTranslationKey(NAMESPACE.id("warped_fungi"))
+                .setSoundGroup(Block.DIRT_SOUND_GROUP);
+
+        CRIMSON_WART_BLOCK = new TemplateBlock(NAMESPACE.id("crimson_wart_block"), Material.LEAVES)
+                .setTranslationKey(NAMESPACE.id("crimson_wart_block"))
+                .setSoundGroup(Block.DIRT_SOUND_GROUP)
+                .setHardness(1.F)
+                .setResistance(1.F);
+
+        WARPED_WART_BLOCK = new TemplateBlock(NAMESPACE.id("warped_wart_block"), Material.LEAVES)
+                .setTranslationKey(NAMESPACE.id("warped_wart_block"))
+                .setSoundGroup(Block.DIRT_SOUND_GROUP)
+                .setHardness(1.F)
+                .setResistance(1.F);
     }
 }
