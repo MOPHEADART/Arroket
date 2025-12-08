@@ -6,6 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.modificationstation.stationapi.api.event.registry.BlockRegistryEvent;
 import net.modificationstation.stationapi.api.mod.entrypoint.EntrypointManager;
+import net.modificationstation.stationapi.api.registry.BlockRegistry;
 import net.modificationstation.stationapi.api.template.block.TemplateBlock;
 //import net.modificationstation.stationapi.api.template.block.TemplateSlabBlock;
 import net.modificationstation.stationapi.api.template.block.TemplateStairsBlock;
@@ -101,11 +102,11 @@ public class BlockListener {
         //WARPED_SLAB = new TemplateSlabBlock(NAMESPACE.id("warped_slab"), false)
                 //.setTranslationKey(NAMESPACE.id("warped_slab"));
 
-        CRIMSON_FUNGI = new NyliumFungi(NAMESPACE.id("crimson_fungi"), Material.LEAVES)
+        CRIMSON_FUNGI = new NyliumFungi(NAMESPACE.id("crimson_fungi"), Material.PLANT)
                 .setTranslationKey(NAMESPACE.id("crimson_fungi"))
                 .setSoundGroup(Block.DIRT_SOUND_GROUP);
 
-        WARPED_FUNGI = new NyliumFungi(NAMESPACE.id("warped_fungi"),Material.LEAVES)
+        WARPED_FUNGI = new NyliumFungi(NAMESPACE.id("warped_fungi"),Material.PLANT)
                 .setTranslationKey(NAMESPACE.id("warped_fungi"))
                 .setSoundGroup(Block.DIRT_SOUND_GROUP);
 
