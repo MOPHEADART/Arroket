@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "arroket",
-  "version": "${version}",
+  "version": "0.1",
 
   "name": "Arroket",
   "description": "A revitalized beta 1.7.3 experience.",
