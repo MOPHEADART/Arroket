@@ -51,13 +51,13 @@ public class BlockListener {
         TEST_BLOCK_STAIRS = new TemplateStairsBlock(NAMESPACE.id("test_block_stairs"), TEST_BLOCK)
                                 .setTranslationKey(NAMESPACE.id("test_block_stairs"));
 
-        CRIMSON_NYLIUM = new TemplateBlock(NAMESPACE.id("crimson_nylium"), Material.STONE)
+        CRIMSON_NYLIUM = new NyliumBlock(NAMESPACE.id("crimson_nylium"), Material.STONE)
                         .setTranslationKey(NAMESPACE.id("crimson_nylium"))
                         .setSoundGroup(Block.STONE_SOUND_GROUP)
                         .setHardness(0.5F)
                         .setResistance(0.5F);
 
-        WARPED_NYLIUM = new TemplateBlock(NAMESPACE.id("warped_nylium"), Material.STONE)
+        WARPED_NYLIUM = new NyliumBlock(NAMESPACE.id("warped_nylium"), Material.STONE)
                 .setTranslationKey(NAMESPACE.id("warped_nylium"))
                 .setSoundGroup(Block.STONE_SOUND_GROUP)
                 .setHardness(0.5F)

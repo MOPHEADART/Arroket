@@ -23,37 +23,57 @@ public class BoneMealMixin {
             int blockId = world.getBlockId(x, y, z);
 
             if (blockId == BlockListener.CRIMSON_NYLIUM.id) {
-                if (tryGrowFungus(world, x, y+1, z, BlockListener.CRIMSON_FUNGI)) {
-                    consumeBoneMeal(world, entity, stack, x, y, z);
+                if (tryGrow(world, x, y, z, BlockListener.CRIMSON_FUNGI, blockId)) {
+                    consumeBoneMeal(stack);
                     cir.setReturnValue(true);
                     cir.cancel();
                 }
             } else if (blockId == BlockListener.WARPED_NYLIUM.id) {
-                if (tryGrowFungus(world, x, y+1, z, BlockListener.WARPED_FUNGI)) {
-                    consumeBoneMeal(world, entity, stack, x, y, z);
+                if (tryGrow(world, x, y, z, BlockListener.WARPED_FUNGI, blockId)) {
+                    consumeBoneMeal(stack);
                     cir.setReturnValue(true);
                     cir.cancel();
                 }
             }
     }
     @Unique
-    private boolean tryGrowFungus(World world, int x, int y, int z, Block NyliumFungi) {
-        if (world.isAir(x, y, z)) {
-            world.setBlock(x, y, z, NyliumFungi.id);
+    private boolean tryGrow(World world, int x, int y, int z, Block fungi, int nyliumId) {
+        Random random = world.random;
+        boolean grewFungus = false;
+        boolean grewNylium = false;
+
+        int originalNylium = world.getBlockId(x, y, z);
+
+        for (int i = 0; i < 128; ++i) {
+
+            int fx = x + random.nextInt(7) - 3;
+            int fy = y + 1;
+            int fz = z + random.nextInt(7) - 3;
+
+            int blockBelow = world.getBlockId(fx, fy - 1, fz);
+
+            if (blockBelow != originalNylium && blockBelow != Block.NETHERRACK.id)
+                continue;
+
+            if (!world.isAir(fx, fy, fz))
+                continue;
+
+            if (blockBelow == Block.NETHERRACK.id) {
+                world.setBlock(fx, fy - 1, fz, nyliumId);
+            }
+
+            if (random.nextInt(3) != 0) {
+                world.setBlock(fx, fy, fz, fungi.id);
+            }
+
             return true;
         }
         return false;
     }
 
-    @Unique
-    private void consumeBoneMeal(World world, PlayerEntity player, ItemStack stack, int x, int y, int z) {
-        stack.count--;
 
-        Random random = world.random;
-        for (int i = 0; i < 8; i++) {
-            double px = x + random.nextDouble();
-            double py = y + 1.0D + random.nextDouble() * 0.3D;
-            double pz = z + random.nextDouble();
-        }
+    @Unique
+    private void consumeBoneMeal(ItemStack stack) {
+        stack.count--;
     }
 }

@@ -84,7 +84,7 @@ dependencies {
 	// https://github.com/paulevsGitch/BHCre...
 	modImplementation("com.github.paulevsGitch:BHCreative:${project.properties["bhcreative_version"]}")
 	// https://github.com/matthewperiut/retr...
-	modImplementation("maven.modrinth:retrocommands:${project.properties["retrocommands_version"]}")
+	// modImplementation("maven.modrinth:retrocommands:${project.properties["retrocommands_version"]}")
 }
 
 configurations.all {
