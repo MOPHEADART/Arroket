@@ -39,8 +39,6 @@ public class BoneMealMixin {
     @Unique
     private boolean tryGrow(World world, int x, int y, int z, Block fungi, int nyliumId) {
         Random random = world.random;
-        boolean grewFungus = false;
-        boolean grewNylium = false;
 
         int originalNylium = world.getBlockId(x, y, z);
 
@@ -50,22 +48,37 @@ public class BoneMealMixin {
             int fy = y + 1;
             int fz = z + random.nextInt(7) - 3;
 
-            int blockBelow = world.getBlockId(fx, fy - 1, fz);
-
-            if (blockBelow != originalNylium && blockBelow != Block.NETHERRACK.id)
+            if (world.getBlockId(fx, fy - 1, fz) != originalNylium)
                 continue;
 
             if (!world.isAir(fx, fy, fz))
                 continue;
 
-            if (blockBelow == Block.NETHERRACK.id) {
-                world.setBlock(fx, fy - 1, fz, nyliumId);
-            }
-
-            if (random.nextInt(3) != 0) {
+            if (random.nextInt(2) != 0) {
                 world.setBlock(fx, fy, fz, fungi.id);
             }
 
+            int radius = 3;
+            for (int dx = -radius; dx <= radius; dx++) {
+                for (int dz = -radius; dz <= radius; dz++) {
+                    for (int dy = -1; dy <= 1; dy++) {
+                        int nx = x + dx;
+                        int ny = y + dy;
+                        int nz = z + dz;
+
+
+                        if (world.getBlockId(nx, ny, nz) != Block.NETHERRACK.id)
+                            continue;
+
+                        if (!world.isAir(nx, ny + 1, nz))
+                            continue;
+
+                        if (random.nextInt(2) == 0) {
+                            world.setBlock(nx, ny, nz, nyliumId);
+                        }
+                    }
+                }
+            }
             return true;
         }
         return false;
