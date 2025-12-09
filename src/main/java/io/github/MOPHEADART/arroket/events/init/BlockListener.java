@@ -106,7 +106,7 @@ public class BlockListener {
                 .setTranslationKey(NAMESPACE.id("crimson_fungi"))
                 .setSoundGroup(Block.DIRT_SOUND_GROUP);
 
-        WARPED_FUNGI = new NyliumFungi(NAMESPACE.id("warped_fungi"),Material.PLANT)
+        WARPED_FUNGI = new NyliumFungi(NAMESPACE.id("warped_fungi"), Material.PLANT)
                 .setTranslationKey(NAMESPACE.id("warped_fungi"))
                 .setSoundGroup(Block.DIRT_SOUND_GROUP);
 
