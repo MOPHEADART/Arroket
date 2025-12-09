@@ -80,11 +80,11 @@ dependencies {
 	// https://github.com/calmilamsy/modmenu
 	modImplementation("net.danygames2014:modmenu:${project.properties["modmenu_version"]}")
 	// https://github.com/Glass-Series/Always-More-Items
-	// modImplementation("net.glasslauncher.mods:AlwaysMoreItems:${project.properties["alwaysmoreitems_version"]}")
+	modImplementation("net.glasslauncher.mods:AlwaysMoreItems:${project.properties["alwaysmoreitems_version"]}")
 	// https://github.com/paulevsGitch/BHCre...
 	modImplementation("com.github.paulevsGitch:BHCreative:${project.properties["bhcreative_version"]}")
 	// https://github.com/matthewperiut/retr...
-	// modImplementation("maven.modrinth:retrocommands:${project.properties["retrocommands_version"]}")
+	modImplementation("maven.modrinth:retrocommands:${project.properties["retrocommands_version"]}")
 }
 
 configurations.all {
