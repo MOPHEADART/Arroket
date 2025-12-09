@@ -10,6 +10,7 @@ tile.@.crimson_stairs.name = Crimson Stairs
 tile.@.warped_planks.name = Warped Planks
 tile.@.warped_stairs.name = Warped Stairs
 tile.@.crimson_fungi.name = Crimson Fungi
+tile.@.warped_fungi.name = Warped Fungi
 tile.@.crimson_wart_block = Crimson Wart Block
 tile.@.warped_wart_block = Warped Wart Block
 
