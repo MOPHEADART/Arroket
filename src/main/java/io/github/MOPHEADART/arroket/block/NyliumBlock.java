@@ -10,7 +10,7 @@ import java.util.Random;
 
 public class NyliumBlock extends TemplateBlock {
     public NyliumBlock(Identifier identifier, Material material) {
-        super(identifier, Material.SOLID_ORGANIC);
+        super(identifier, Material.STONE);
         this.setTickRandomly(true);
     }
 
