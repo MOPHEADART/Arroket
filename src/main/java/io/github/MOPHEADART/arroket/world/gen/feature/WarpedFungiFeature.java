@@ -50,7 +50,7 @@ public class WarpedFungiFeature extends Feature {
                 world.setBlock(x + 1, y + i, z + 2, BlockListener.WARPED_WART_BLOCK.id);
                 world.setBlock(x, y + i, z + 2, BlockListener.WARPED_WART_BLOCK.id);
                 world.setBlock(x - 1, y + i, z + 2, BlockListener.WARPED_WART_BLOCK.id);
-                // Generate negative x side of the cap
+                // Generate negative z side of the cap
                 world.setBlock(x + 1, y + i, z - 2, BlockListener.WARPED_WART_BLOCK.id);
                 world.setBlock(x, y + i, z - 2, BlockListener.WARPED_WART_BLOCK.id);
                 world.setBlock(x - 1, y + i, z - 2, BlockListener.WARPED_WART_BLOCK.id);
