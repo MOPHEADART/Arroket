@@ -11,7 +11,6 @@ import net.modificationstation.stationapi.api.event.world.biome.BiomeRegisterEve
 import net.modificationstation.stationapi.api.event.worldgen.biome.BiomeProviderRegisterEvent;
 import net.modificationstation.stationapi.api.worldgen.BiomeAPI;
 import net.modificationstation.stationapi.api.worldgen.biome.BiomeBuilder;
-import net.modificationstation.stationapi.api.worldgen.biome.ClimateBiomeProvider;
 import net.modificationstation.stationapi.api.worldgen.biome.VoronoiBiomeProvider;
 import net.modificationstation.stationapi.api.worldgen.surface.SurfaceBuilder;
 
