@@ -1,6 +1,8 @@
 package io.github.MOPHEADART.arroket.events.init;
 
 import io.github.MOPHEADART.arroket.block.*;
+import io.github.MOPHEADART.arroket.block.template.SlabBlockTemplate;
+import io.github.MOPHEADART.arroket.block.template.StairsBlockTemplate;
 import net.mine_diver.unsafeevents.listener.EventListener;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -9,6 +11,7 @@ import net.modificationstation.stationapi.api.mod.entrypoint.EntrypointManager;
 import net.modificationstation.stationapi.api.registry.BlockRegistry;
 import net.modificationstation.stationapi.api.template.block.TemplateBlock;
 //import net.modificationstation.stationapi.api.template.block.TemplateSlabBlock;
+import net.modificationstation.stationapi.api.template.block.TemplateSlabBlock;
 import net.modificationstation.stationapi.api.template.block.TemplateStairsBlock;
 
 import java.lang.invoke.MethodHandles;
@@ -29,11 +32,10 @@ public class BlockListener {
     public static Block WARPED_STEM;
     public static Block CRIMSON_PLANKS;
     public static Block WARPED_PLANKS;
-    //public static Block CRIMSON_SLAB;
-    //public static Block CRIMSON_DOUBLE_SLAB;
+    public static Block CRIMSON_SLAB;
     public static Block CRIMSON_STAIRS;
-    //public static Block WARPED_SLAB;
     public static Block WARPED_STAIRS;
+    public static Block WARPED_SLAB;
     public static Block CRIMSON_FUNGI;
     public static Block WARPED_FUNGI;
     public static Block CRIMSON_WART_BLOCK;
@@ -76,31 +78,29 @@ public class BlockListener {
                 .setResistance(2.F);
 
 
-        CRIMSON_PLANKS = new CrimsonPlanks(NAMESPACE.id("crimson_planks"), Material.WOOD)
+        CRIMSON_PLANKS = new TemplateBlock(NAMESPACE.id("crimson_planks"), Material.WOOD)
                 .setTranslationKey(NAMESPACE.id("crimson_planks"))
                 .setSoundGroup(Block.WOOD_SOUND_GROUP)
                 .setHardness(2.F)
                 .setResistance(2.F);
 
-        CRIMSON_STAIRS = new TemplateStairsBlock(NAMESPACE.id("crimson_stairs"), CRIMSON_PLANKS)
+        CRIMSON_STAIRS = new StairsBlockTemplate(NAMESPACE.id("crimson_stairs"), CRIMSON_PLANKS)
                 .setTranslationKey(NAMESPACE.id("crimson_stairs"));
 
-        //CRIMSON_SLAB = new TemplateSlabBlock(NAMESPACE.id("crimson_slab"), false)
-                //.setTranslationKey(NAMESPACE.id("crimson_slab"));
-        //CRIMSON_DOUBLE_SLAB = new TemplateSlabBlock(NAMESPACE.id("crimson_double_slab"), true)
-                //.setTranslationKey(NAMESPACE.id("crimson_double_slab"));
+        CRIMSON_SLAB = new SlabBlockTemplate(NAMESPACE.id("crimson_slab"), CRIMSON_PLANKS)
+                .setTranslationKey(NAMESPACE.id("crimson_slab"));
 
-        WARPED_PLANKS = new WarpedPlanks(NAMESPACE.id("warped_planks"), Material.WOOD)
+        WARPED_PLANKS = new TemplateBlock(NAMESPACE.id("warped_planks"), Material.WOOD)
                 .setTranslationKey(NAMESPACE.id("warped_planks"))
                 .setSoundGroup(Block.WOOD_SOUND_GROUP)
                 .setHardness(2.F)
                 .setResistance(2.F);
 
-        WARPED_STAIRS = new TemplateStairsBlock(NAMESPACE.id("warped_stairs"), WARPED_PLANKS)
+        WARPED_STAIRS = new StairsBlockTemplate(NAMESPACE.id("warped_stairs"), WARPED_PLANKS)
                 .setTranslationKey(NAMESPACE.id("warped_stairs"));
 
-        //WARPED_SLAB = new TemplateSlabBlock(NAMESPACE.id("warped_slab"), false)
-                //.setTranslationKey(NAMESPACE.id("warped_slab"));
+        WARPED_SLAB = new SlabBlockTemplate(NAMESPACE.id("warped_slab"), WARPED_PLANKS)
+                .setTranslationKey(NAMESPACE.id("warped_slab"));
 
         CRIMSON_FUNGI = new NyliumFungi(NAMESPACE.id("crimson_fungi"), Material.PLANT)
                 .setTranslationKey(NAMESPACE.id("crimson_fungi"))

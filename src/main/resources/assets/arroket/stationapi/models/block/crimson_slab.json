@@ -1,0 +1,6 @@
+{
+  "parent": "arroket:block/template/slab",
+  "textures": {
+    "all": "arroket:block/crimson_planks"
+  }
+}

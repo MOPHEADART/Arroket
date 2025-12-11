@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "slab_type=bottom": {
+      "model": "arroket:block/warped_slab"
+    },
+
+    "slab_type=top": {
+      "model": "arroket:block/warped_slab",
+      "x": 180
+    },
+
+    "slab_type=double": {
+      "model": "arroket:block/warped_bundle"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "arroket:block/template/stairs",
+  "textures": {
+    "all": "arroket:block/crimson_planks"
+  }
+}

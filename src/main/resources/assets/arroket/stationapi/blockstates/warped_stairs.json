@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "arroket:block/warped_stairs"
+    },
+    "facing=east": {
+      "model": "arroket:block/warped_stairs",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "arroket:block/warped_stairs",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "arroket:block/warped_stairs",
+      "y": 270
+    }
+  }
+}

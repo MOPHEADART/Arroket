@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "slab_type=bottom": {
+      "model": "arroket:block/crimson_slab"
+    },
+
+    "slab_type=top": {
+      "model": "arroket:block/crimson_slab",
+      "x": 180
+    },
+
+    "slab_type=double": {
+      "model": "arroket:block/crimson_bundle"
+    }
+  }
+}
